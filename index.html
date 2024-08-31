@@ -1,1 +1,49 @@
-<h1>Hello World</h1>
+<!doctype html>
+
+<html>
+
+<head>
+  <!-- Recommended meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <!-- PyScript CSS -->
+  <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+  <!-- This script tag bootstraps PyScript -->
+  <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+
+  <!-- for splashscreen -->
+  <style>
+    #loading {
+      outline: none;
+      border: none;
+      background: pink
+    }
+  </style>
+  <title>PyScript Hello World</title>
+</head>
+
+<body>
+
+  <nav class="navbar" style="background-color: #000000">
+    <div class="app-header">
+      <a class="title" href="" style="color: #f0ab3c">Hello World</a>
+    </div>
+  </nav>
+
+  <py-script>
+    def weight_loss_prediction():
+    user_data = user_questions.get_user_data(True) # {}
+
+    modified_calories = plan_calculations.check_calories_intake(user_data)
+
+    if modified_calories:
+    user_data.update({"calorieIntake": modified_calories})
+    plan_data = make_plan.make_user_plan(user_data)
+    weight_loss_prediction()
+  </py-script>
+
+  
+<script>console.log('js workikng)</script>
+</body>
+
+</html>
